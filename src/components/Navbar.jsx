@@ -1,44 +1,34 @@
-import React from "react";
-import FireIcon from "../icons/fire-stroke-rounded";
-import ZapIcon from "../icons/zap-stroke-rounded (1)";
+import axios from "axios";
+import React, { useEffect } from "react";
+// import useMyStore from "../MyStore";
+import { Link } from "react-router";
+import useSmthStore from "./myStore/store";
+// import Inside from "./Inside";
 
 function Navbar() {
-  const categories = [
-    // "AKSIYALAR",
-    // "1+1",
-    "HAVO SOVUTGICHLAR",
-    "ISITGICHLAR",
-    "SMARTFONLAR",
-    "MUZLATGICHLAR",
-    "CHANGYUTGICHLAR",
-    "NOUTBUKLAR",
-    "TELEVIZORLAR",
-    "BARCHA KATEGORIYALAR",
-  ];
-  return (
-    <div className="bg-gray-100 p-2">
-      <div className="container mx-auto">
-        <div className="flex  px-10 justify-between p-2 ">
-            <div className="flex gap-1 items-center font-semibold hover:text-blue-600">
-                <FireIcon/>
-                <p>AKSIYALAR</p>
-            </div>
-            <div className="flex gap-1 items-center font-semibold hover:text-blue-600">
-                <ZapIcon/>
-                <p>1+1</p>
-            </div>
-          {categories.map((category, index) => (
-            <span
-              key={index}
-              className="text-gray-800 font-semibold cursor-pointer hover:text-blue-600"
-            >
-              {category}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+    const state = useSmthStore()
+  useEffect(() => {
+    axios
+      .get("https://gw.texnomart.uz/api/web/v1/header/top-categories")
+      .then((res) => {
+        // console.log(res.data.data.data);
+        useSmthStore.setState({ nav_section: res.data.data.data });
+      });
+  },[]);
+  return <div className="bg-gray-100 p-4">
+    <div className="container mx-auto px-10  " >
+    
+    <div className="flex justify-between text-xl font-bold ">
+    {state.nav_section.map(item=>{
+       return <div key={item.id}>
+        <Link to={`/catalog/${item.slug}`}><p>{item.title}</p></Link>
+       </div>
+    })}
+  </div>
+  
+  </div>
+  </div>
+  
 }
 
 export default Navbar;

@@ -4,6 +4,7 @@ import HeaderSec from "./HeaderSec";
 import Navbar from "./Navbar";
 
 function Nav_wrp({ toggleCart, setIsCartVisible, isCartVisible,toggleLike,showLikedCard,setShowLikedCard }) {
+  
   return (
     <div>
       <Header />

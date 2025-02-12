@@ -7,11 +7,11 @@ function App() {
   const [showLikedCard, setShowLikedCard] = useState(false);
   const toggleCart = () => {
     setIsCartVisible(!isCartVisible);
-    setShowLikedCard(false)
+    
   };
   const toggleLike = () => {
     setShowLikedCard(!showLikedCard);
-    setIsCartVisible(false)
+    
   };
   return (
     <div>

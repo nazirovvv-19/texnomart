@@ -19,6 +19,7 @@ const smthStore = () => ({
       soni: 1,
     },
   ],
+  nav_section: [],
 });
 const useSmthStore = create(smthStore);
 
