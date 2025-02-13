@@ -6,11 +6,11 @@ import './index.css'
 import App from './App.jsx'
 import Inside from './components/Inside.jsx';
 import Katalog from './components/Katalog.jsx';
-// import Nav_wrp from './components/Nav_wrp.jsx';
+import Nav_wrp from './components/Nav_wrp.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-  {/* <Nav_wrp/> */}
+  <Nav_wrp/>
   <Routes>
     <Route path="/" element={<App />} />
     <Route path="/inside/:id" element={<Inside />} />

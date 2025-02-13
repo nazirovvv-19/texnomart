@@ -24,7 +24,7 @@ function Inside() {
   }
   return (
    <div>
-      <Nav_wrp/>
+     
      <div className="container px-16 my-5">
       <div className="flex items-center   mb-5 justify-between ">
         <p className="text-3xl font-bold">{card.name}</p>
