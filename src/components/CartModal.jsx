@@ -5,7 +5,7 @@ import { Button } from "antd";
 import Delete02Icon from "../icons/delete-02-stroke-rounded";
 
 function CartModal({ isCartVisible }) {
-  const [tolov, setTolov] = useState(false);
+  const [tolov, setTolov] = useState(true);
   const state = useSmthStore();
   const { counter } = useSmthStore();
   const open = () => {

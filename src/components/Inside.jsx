@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import Nav_wrp from "./Nav_wrp";
+import InsideCard from "./InsideCard";
 
 function Inside() {
   const [card, setCard] = useState(null);
@@ -94,6 +95,7 @@ function Inside() {
         </div>
       </div>
     </div>
+    <InsideCard id={id}/>
    </div>
   );
 }
