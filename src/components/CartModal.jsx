@@ -65,7 +65,7 @@ function CartModal({ isCartVisible }) {
         </h3>
         <div className="flex justify-between">
           <div>
-            <div className="flex justify-between h-[400]  w-[870px]  border-b-2">
+            <div className="flex justify-between   w-[870px]  border-b-2">
               <div className="flex gap-2">
                 <input type="checkbox" />
                 <p>hammsini tanlash</p>
