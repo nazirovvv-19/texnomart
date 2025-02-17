@@ -36,7 +36,7 @@ function Products({  showLikedCard }) {
     <div>
       <div className="container mx-auto px-5">
         <h1 className="text-2xl font-bold mt-6 px-5">Yangi mahsulotlar</h1>
-        <div className="grid grid-cols-5 gap-10 mt-10 ">
+        <div className="flex justify-between flex-wrap mt-10 ">
           {mahsulotlar.map((item, index) => {
             console.log(item);
             

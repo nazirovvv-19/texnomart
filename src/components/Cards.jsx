@@ -5,7 +5,7 @@ import heart from "../assets/heart.svg";
 import useSmthStore from './myStore/store';
 
 function Card({item , index}) {
-    const {counter}=useSmthStore()
+    const {counter,count}=useSmthStore()
     const findProduct = (item) => {
         const find = counter.find((prod) => prod.id === item.id);
     

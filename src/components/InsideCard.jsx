@@ -9,7 +9,7 @@ function InsideCard({id}) {
     useEffect(()=>{
         axios.get('https://gw.texnomart.uz/api/web/v1/product/accessories?id='+id).then(res=>{setAccessories(res.data.data.data);
         })
-    },[])
+    },[id])
     console.log(accessories[activeIndex]);
     if (accessories.length===0) {
         return <div>loading...</div>
@@ -25,7 +25,7 @@ function InsideCard({id}) {
             </div>
         })}
     </div>
-    <div className='grid grid-cols-5 gap-5 mt-10'>
+    <div className='flex justify-between mt-10 flex-wrap'>
         {accessories[activeIndex].products.map(item=>{
             return <div>
                 <Card item={item}/>

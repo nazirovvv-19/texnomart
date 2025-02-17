@@ -8,13 +8,14 @@ function Inside() {
   const [card, setCard] = useState(null);
   const { id } = useParams();
   useEffect(() => {
+    setCard()
     axios
       .get("https://gw.texnomart.uz/api/web/v1/product/detail?id=" + id)
       .then((res) => {
         setCard(res.data.data.data);
         console.log(res.data.data.data);
       });
-  }, []);
+  }, [id]);
 
   if (!card) {
     return (
