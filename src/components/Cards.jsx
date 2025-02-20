@@ -65,7 +65,7 @@ function Card({item , index}) {
                     />
                   </div>
                   <p className="w-[250px] mt-2 h-[70px]  ml-1 "> {item.name}</p>
-                  <p className="text-[12px] px-2 rounded-xl w-[150px] py-[2px] mt-3 ml-1 bg-gray-200">
+                  <p className="text-[12px] px-2 rounded-xl w-[160px] py-[2px] mt-3 ml-1 bg-gray-200">
                     {item.axiom_monthly_price.toLocaleString("ru")}
                   </p>
                   <div className="flex justify-between items-center">

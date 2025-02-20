@@ -20,6 +20,8 @@ const smthStore = () => ({
     },
   ],
   nav_section: [],
+  currentSort:"price",
+  tartibi:false
 });
 const useSmthStore = create(smthStore);
 

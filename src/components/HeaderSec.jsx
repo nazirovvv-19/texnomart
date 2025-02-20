@@ -7,6 +7,7 @@ import Cancel01Icon from "../icons/cancel-01-stroke-rounded (1)";
 import { Link } from "react-router";
 import Savatcha from "./Savatcha";
 import LikeSavati from "./LikeSavati";
+import Kirish from "./Kirish";
 
 function HeaderSec({ toggleLike }) {
   const { count } = useSmthStore();
@@ -39,7 +40,7 @@ function HeaderSec({ toggleLike }) {
             placeholder="Qidirish "
           />
           <div className="flex flex-col items-center">
-            <UserIcon />
+            <Kirish/>
             <p>Kirish</p>
           </div>
           <LikeSavati />
